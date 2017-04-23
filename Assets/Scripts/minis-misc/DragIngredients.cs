@@ -4,7 +4,7 @@ public class DragIngredients : MonoBehaviour {
 
     GameObject extra;
     public GameObject Mini;
-    public BoxCollider2D SandwichMakeArea, SandwichDropArea;
+    public Collider2D SandwichMakeArea, SandwichDropArea;
 
     void OnMouseDrag() {
         if(!extra) {
@@ -24,7 +24,9 @@ public class DragIngredients : MonoBehaviour {
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
-    void OnTriggerEnter2D() {
-        
+    void OnTriggerEnter2D(Collider2D col){
+        if(col == SandwichMakeArea){
+            SandwichMakeArea.GetComponent<SandwichIngredientAccept>().incrementIngredientCount();
+        }
     }
 }
