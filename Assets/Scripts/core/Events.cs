@@ -14,7 +14,8 @@ public class Events : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-			if(q.linesSinceCheckpoint == 10) {
+			// INTRODUCTION
+			if(q.linesSinceCheckpoint == 34) {
 				q.loadNextMiniGame();
 				q.setLineCheckpoint();
 			}

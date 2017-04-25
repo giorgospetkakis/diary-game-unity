@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\minis-misc\SandwichIngredientAccept.cs" />
      <Compile Include="Assets\Scripts\minis\MiniGame.cs" />
      <Compile Include="Assets\Scripts\minis\SandwichMini.cs" />
+     <Compile Include="Assets\Scripts\minis\SlingshotMini.cs" />
      <Compile Include="Assets\Scripts\text\FileReader.cs" />
      <Compile Include="Assets\Scripts\text\TextCue.cs" />
      <None Include="Assets\script.txt" />
