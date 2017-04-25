@@ -25,7 +25,7 @@ public class DragIngredients : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col){
-        if(col == SandwichMakeArea){
+        if (col == SandwichMakeArea){
             SandwichMakeArea.GetComponent<SandwichIngredientAccept>().incrementIngredientCount();
         }
     }

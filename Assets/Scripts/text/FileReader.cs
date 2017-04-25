@@ -12,10 +12,8 @@ public class FileReader {
 
 		string[] split = contents.Split('_');
 		for(int i = 0; i < split.Length; i++){
-			Debug.Log(split[i]);
 			scriptSequence.Enqueue(split[i]);
 		}
-
 		return scriptSequence;
 	}
 }

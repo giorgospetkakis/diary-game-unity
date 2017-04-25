@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SandwichIngredientAccept : MonoBehaviour {
 
-	int ingredientCount;
+	public int ingredientCount;
 
 	// Use this for initialization
 	public void incrementIngredientCount(){

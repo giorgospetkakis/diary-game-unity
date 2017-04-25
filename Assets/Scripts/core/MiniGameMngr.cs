@@ -7,14 +7,15 @@ public class MiniGameMngr : MonoBehaviour {
 
 	private MiniGame currMini;
 	private GameObject currMiniHolder;
+	public GameObject miniGameHolder;
 
 	public void LoadMiniGame(int mIndex) {
 		if (mIndex < minigames.Length) {
-			Destroy(currMiniHolder);
 			// Find minigame in array
 			currMini = minigames[mIndex].GetComponent<MiniGame>();
 
 			currMiniHolder = Instantiate(currMini.gameObject) as GameObject;
+			currMiniHolder.transform.parent = miniGameHolder.transform;
 
 			currMini.init();
 			currMini.begin();
@@ -24,14 +25,12 @@ public class MiniGameMngr : MonoBehaviour {
 		}
 	}
 
+	public void DespawnMini() {
+		Destroy(currMiniHolder);
+	}
+
 	// Use this for initialization
 	void Start () {
-		LoadMiniGame(0);
+		
 	}
 }
-
-		// Vector2 release = ((Vector2) sling.position - endPoint).normalized * damp;
-		// Debug.Log(release);
-		// GameObject temp_projectile = Instantiate(projectile, sling.position, Quaternion.identity) as GameObject;
-		// temp_projectile.transform.parent = projectiles;
-		// temp_projectile.GetComponent<Rigidbody2D>().AddForce(release);
