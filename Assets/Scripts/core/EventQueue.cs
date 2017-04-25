@@ -7,7 +7,7 @@ public class EventQueue : MonoBehaviour {
 
 	public TextCue NarrationTextFeed;
 	public int linesSinceCheckpoint = 0;
-	int lastMini = 0, lastCutScene = 0;
+	int lastMini = 0;
 
 	public void runLineQueue() {
 		NarrationTextFeed.showNextLine();
@@ -26,11 +26,7 @@ public class EventQueue : MonoBehaviour {
 	}
 
 	public void loadNextCutScene() {
-		GetComponent<CutsceneMngr>().LoadBackdrop(lastCutScene++);
-	}
 
-	public void despawnCutscene() {
-		GetComponent<CutsceneMngr>().DespawnBackdrop();
 	}
 
 	public void setLineCheckpoint() {

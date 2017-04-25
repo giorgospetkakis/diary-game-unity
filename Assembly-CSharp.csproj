@@ -46,8 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Env\CandleFlicker.cs" />
-     <Compile Include="Assets\Scripts\core\CutsceneMngr.cs" />
      <Compile Include="Assets\Scripts\core\EventQueue.cs" />
      <Compile Include="Assets\Scripts\core\Events.cs" />
      <Compile Include="Assets\Scripts\core\MiniGameMngr.cs" />
