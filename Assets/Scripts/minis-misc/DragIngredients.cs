@@ -25,8 +25,8 @@ public class DragIngredients : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col){
-        if (col == SandwichMakeArea){
-            SandwichMakeArea.GetComponent<SandwichIngredientAccept>().incrementIngredientCount();
+        if (col == SandwichMakeArea) {
+            SandwichMakeArea.GetComponent<SandwichIngredientAccept>().addIngredientToStack(gameObject);
         }
     }
 }

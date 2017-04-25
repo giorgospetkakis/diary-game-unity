@@ -12,7 +12,7 @@ public class Events : MonoBehaviour {
 		blockSize = new int[] {34};
 		lineBlockIndex = 0;
 
-		q.loadNextCutScene();
+		//q.loadNextCutScene();
 	}
 	
 	// Update is called once per frame
