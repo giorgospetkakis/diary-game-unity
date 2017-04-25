@@ -19,7 +19,7 @@ public class TextCue : MonoBehaviour {
 	public string showNextLine() {
 		string line = "";
 		if(cuedText.Count > 0) {
-			if(linesOnCurrent > 5) {
+			if(linesOnCurrent > 0) {
 				clearPanel();
 			}
 			line = cuedText.Peek();
