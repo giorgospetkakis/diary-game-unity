@@ -12,7 +12,10 @@ public class EventQueue : MonoBehaviour {
 	public void runLineQueue() {
 		NarrationTextFeed.showNextLine();
 		linesSinceCheckpoint++;
-		Debug.Log(linesSinceCheckpoint);
+	}
+
+	public void runLineQueueMini() {
+		NarrationTextFeed.showNextLine();
 	}
 
 	public void loadNextMiniGame() {

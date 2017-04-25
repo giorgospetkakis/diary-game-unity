@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class SandwichIngredientAccept : MonoBehaviour {
 
-	public int breadCount;
+	public int breadCount, sThresh;
 	public int sandwichCount;
+	public GameObject GameManager;
 	ArrayList ingredientStack;
 
+
 	void Start() {
+		GameManager = GameObject.Find("GameManager");
 		ingredientStack = new ArrayList();
+		sThresh = 2;
 	}
 
 	public void addIngredientToStack(GameObject ing){
@@ -25,6 +29,11 @@ public class SandwichIngredientAccept : MonoBehaviour {
 			}
 			breadCount = 0;
 			sandwichCount++;
+		}
+		
+		if(sandwichCount > sThresh) {
+			GameManager.GetComponent<EventQueue>().runLineQueueMini();
+			sThresh++;
 		}
 	}
 }
