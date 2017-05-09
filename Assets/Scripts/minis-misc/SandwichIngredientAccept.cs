@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SandwichIngredientAccept : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class SandwichIngredientAccept : MonoBehaviour {
 	public int sandwichCount;
 	public GameObject GameManager;
 	ArrayList ingredientStack;
+	public SandwichSoundCue ssc;
+	public Text t;
 
 
 	void Start() {
@@ -17,6 +20,7 @@ public class SandwichIngredientAccept : MonoBehaviour {
 	}
 
 	public void addIngredientToStack(GameObject ing){
+		ssc.add();
 		ing.GetComponent<Collider2D>().enabled = false;
 		GameObject temp = Instantiate(ing, gameObject.transform.position, Quaternion.Euler(0,0,Random.Range(-30, 30))) as GameObject;
 		ingredientStack.Add(temp);
@@ -24,6 +28,7 @@ public class SandwichIngredientAccept : MonoBehaviour {
 			breadCount++;
 
 		if(breadCount == 2) {
+			ssc.complete();
 			foreach(GameObject i in ingredientStack) {
 				Destroy(i);
 			}
@@ -35,5 +40,7 @@ public class SandwichIngredientAccept : MonoBehaviour {
 			GameManager.GetComponent<EventQueue>().runLineQueueMini();
 			sThresh++;
 		}
+
+		t.text = ""  + sandwichCount;
 	}
 }

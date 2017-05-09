@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\minis-misc\DragIngredients.cs" />
      <Compile Include="Assets\Scripts\minis-misc\ProjectileCollisionDeath.cs" />
      <Compile Include="Assets\Scripts\minis-misc\SandwichIngredientAccept.cs" />
+     <Compile Include="Assets\Scripts\minis-misc\SandwichSoundCue.cs" />
      <Compile Include="Assets\Scripts\minis\MiniGame.cs" />
      <Compile Include="Assets\Scripts\minis\SandwichMini.cs" />
      <Compile Include="Assets\Scripts\minis\SlingshotMini.cs" />

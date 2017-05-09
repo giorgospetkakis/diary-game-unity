@@ -5,6 +5,7 @@ public class DragIngredients : MonoBehaviour {
     GameObject extra;
     public GameObject Mini;
     public Collider2D SandwichMakeArea, SandwichDropArea;
+    public SandwichSoundCue ssc;
 
     void OnMouseDrag() {
         if(!extra) {
@@ -21,6 +22,7 @@ public class DragIngredients : MonoBehaviour {
 
     void OnMouseUp() {
         Destroy(extra);
+        ssc.drop();
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
